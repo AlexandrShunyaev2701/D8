@@ -1,0 +1,16 @@
+# coding: utf-8
+user_1 = User.objects.create_user('Popov')
+from news.models import *
+user_1 = User.objects.create_user('Popov')
+user_2 = User.objects.create_user("Osipov")
+user_3 = User.objects.create_user("Malkin")
+author_1 = Author.objects.create(author = user_1)
+author_2 = Author.objects.create(author = user_2)
+category_1 = Category.objects.create(name_category = "Sport")
+category_2 = Category.objects.create(name_category = "Films")
+category_3 = Category.objects.create(name_category = "Auto")
+category_4 = Category.objects.create(name_category = "Music")
+post_1 = Post.objects.create(author_news = author_1, position = Post.post, category = category_1, headline = "Аргентина - чемпион мира 2022", text = "Аргентина в финале одолела сборную Франции в серии пенальти!")
+post_1 = Post.objects.create(author_news = author_1, position = Post.post, headline = "Аргентина - чемпион мира 2022", text = "Аргентина в финале одолела сборную Франции в серии пенальти!")
+news_1 = Post.objects.create(author_news = aithor_2, position = Post.news, headline = "СВО на Украине", text = "24 февраля началась СВО на Украине")
+news_1 = Post.objects.create(author_news = author_2, position = Post.news, headline = "СВО на Украине", text = "24 февраля началась СВО на Украине")
